@@ -204,7 +204,78 @@ body.nav-active {
   background-color: var(--gold-crayola);
 }
 
-/* ---------- REUSED STYLE --------- */
+/* ==================== TYPOGRAPHY ======================*/
+
+.display-1,
+.headline-1,
+.headline-2,
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+  color: var(--white);
+  font-family: var(--fontFamily-forum);
+  font-weight: var(--weight-regular);
+  line-height: var(--lineHeight-2);
+}
+
+.display-1 {
+  font-size: var(--fontSize-display-1);
+  line-height: var(--lineHeight-1);
+}
+
+.headline-1 {
+  font-size: var(--fontSize-headline-1);
+}
+
+.headline-2 {
+  font-size: var(--fontSize-headline-2);
+  line-height: var(--lineHeight-6);
+}
+
+.title-1 {
+  font-size: var(--fontSize-title-1);
+}
+
+.title-2 {
+  font-size: var(--fontSize-title-2);
+}
+
+.title-3 {
+  font-size: var(--fontSize-title-3);
+}
+
+.title-4 {
+  font-size: var(--fontSize-title-4);
+}
+
+.body-1 {
+  font-size: var(--fontSize-body-1);
+  line-height: var(--lineHeight-6);
+}
+
+.body-2 {
+  font-size: var(--fontSize-body-2);
+  line-height: var(--lineHeight-4);
+}
+
+.body-3 {
+  font-size: var(--fontSize-body-3);
+}
+
+.body-4 {
+  font-size: var(--fontSize-body-4);
+}
+
+.label-1 {
+  font-size: var(--fontSize-label-1);
+}
+
+.label-2 {
+  font-size: var(--fontSize-label-2);
+}
+
+/* ===================== REUSED STYLE ====================== */
 
 .container {
   padding-inline: 16px;
@@ -1173,6 +1244,114 @@ body.nav-active {
   right: 0;
 }
 
+/*-----------------------------------*\
+  #TESTIMONIALS
+\*-----------------------------------*/
+
+.testi {
+  padding-block-end: 340px;
+  position: static;
+}
+
+.testi .quote {
+  font-size: 7rem;
+  font-family: var(--fontFamily-forum);
+  line-height: 0.7em;
+}
+
+.testi .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-block: 40px 50px;
+}
+
+.testi .separator {
+  animation: rotate360 15s linear infinite;
+}
+
+.profile .img {
+  margin-inline: auto;
+  border-radius: var(--radius-circle);
+  margin-block-end: 15px;
+}
+
+.testi .profile-name {
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-3);
+}
+
+/*-----------------------------------*\
+  #RESERVATION
+\*-----------------------------------*/
+
+.reservation-form {
+  margin-block-start: -270px;
+}
+
+.form-text {
+  margin-block-end: 40px;
+}
+
+.form-text .link {
+  display: inline;
+  color: var(--gold-crayola);
+}
+
+.form-right .headline-1 {
+  margin-block-end: 40px;
+}
+
+.form-right .contact-label {
+  margin-block-end: 5px;
+}
+
+.form-right .separator {
+  margin: 20px auto;
+}
+
+.form-right .body-4 {
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-3);
+}
+
+.form-right .body-4:not(:last-child) {
+  margin-block-end: 25px;
+}
+
+.form-left,
+.form-right {
+  padding: 40px 20px 30px;
+}
+
+.input-field[type="date"] {
+  text-transform: uppercase;
+  padding-inline-end: 10px;
+}
+
+.input-field[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+textarea.input-field {
+  resize: none;
+  height: 140px;
+  padding-block: 20px;
+  line-height: var(--lineHeight-1);
+}
+
+.form-left .btn {
+  max-width: 100%;
+  width: 100%;
+}
+
+.form-right {
+  background-repeat: repeat;
+  background-position: top left;
+}
+
 /* --------- media queries ------------------ */
 /* ================== responsive for larger than 575px screen ============== */
 @media (min-width: 575px) {
@@ -1362,6 +1541,20 @@ body.nav-active {
     background-color: var(--gold-crayola);
     color: var(--black);
   }
+
+  /**
+   * RESERVATION
+   */
+
+  .reservation .input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  .reservation .input-wrapper:nth-child(4) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ==============  responsive for larger than 992px screen =============== */
@@ -1475,6 +1668,24 @@ body.nav-active {
     left: 50%;
     height: 100%;
     border-inline-start: 1px solid var(--white-alpha-20);
+  }
+
+  /**
+   * TESTIMONIALS
+   */
+
+  .testi-text {
+    max-width: 910px;
+    margin-inline: auto;
+  }
+
+  /**
+   * RESERVATION
+   */
+
+  .reservation-form {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
   }
 }
 
@@ -1634,6 +1845,15 @@ body.nav-active {
   .menu .grid-list {
     gap: 55px 200px;
     margin-block-end: 55px;
+  }
+
+  /**
+   * TESTIMONIALS
+   */
+
+  .form-left,
+  .form-right {
+    padding: 75px 60px;
   }
 }
 
