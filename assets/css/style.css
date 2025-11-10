@@ -1352,6 +1352,45 @@ textarea.input-field {
   background-position: top left;
 }
 
+/*-----------------------------------*\
+  #FEATURES
+\*-----------------------------------*/
+
+.features .section-title {
+  margin-block-end: 40px;
+}
+
+.feature-card {
+  padding: 30px 20px 40px;
+}
+
+.feature-item:nth-child(2n + 1) .feature-card {
+  background-color: var(--eerie-black-3);
+}
+
+.feature-item:nth-child(2n) .feature-card {
+  background-color: var(--smoky-black-3);
+}
+
+.feature-card .card-icon {
+  max-width: max-content;
+  margin-inline: auto;
+  transition: var(--transition-2);
+}
+
+.feature-card:hover .card-icon {
+  transform: scale(-1) rotate(180deg);
+}
+
+.feature-card .card-title {
+  margin-block: 20px;
+}
+
+.feature-card .card-text {
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-6);
+}
+
 /* --------- media queries ------------------ */
 /* ================== responsive for larger than 575px screen ============== */
 @media (min-width: 575px) {
@@ -1855,6 +1894,14 @@ textarea.input-field {
   .form-right {
     padding: 75px 60px;
   }
+
+  /**
+   * FEATURES
+   */
+
+  .features .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* ==============  responsive for larger than 1400px screen =============== */
@@ -1904,5 +1951,27 @@ textarea.input-field {
     bottom: 0;
     transform: translateY(50%);
     width: max-content;
+  }
+
+  /**
+   * FEATURES
+   */
+
+  .features {
+    overflow: visible;
+  }
+
+  .features .shape {
+    display: block;
+  }
+
+  .features .shape-1 {
+    top: -100px;
+    right: 0;
+  }
+
+  .features .shape-2 {
+    bottom: 80px;
+    left: 0;
   }
 }
